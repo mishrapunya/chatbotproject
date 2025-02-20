@@ -2,6 +2,15 @@ import streamlit as st
 import google.generativeai as genai
 import os
 
+import streamlit as st
+import os
+
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+
+st.title("Debugging API Key")
+st.write(f"API Key: {GOOGLE_API_KEY}")
+
+
 # Set up the page
 st.title("AI Chatbot with Google Gemini")
 st.write("Hello! How can I help you today?")
