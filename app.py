@@ -5,7 +5,8 @@ import os
 import streamlit as st
 import os
 
-GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
+import os
+GOOGLE_API_KEY = st.secrets.get("GOOGLE_API_KEY") or os.getenv("GOOGLE_API_KEY")
 
 st.title("Debugging API Key")
 st.write(f"API Key: {GOOGLE_API_KEY}")
