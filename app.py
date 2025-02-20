@@ -7,7 +7,8 @@ st.title("AI Chatbot with Google Gemini")
 st.write("Hello! How can I help you today?")
 
 # Get API Key from environment variable (safer than hardcoding)
-GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
+import os
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
 # Configure Google Gemini API
 genai.configure(api_key=GOOGLE_API_KEY)
